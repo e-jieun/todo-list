@@ -17,24 +17,23 @@
     const root = document.getElementById('root');
     console.log(root);
 
-    const Div = <div />;
-    
-    const addCar = (text) => {
-      return <>{text}</>;
+    const Car =       
+      <div>
+        사용자 input text가 들어갈 부분
+      </div>;
+
+    function createCar(){
+      let addCar = '';
+      addCar += Car;
+      return ReactDOM.render(Car, root);
     }
-
-    // function divText(textContent){
-    //   return <div></div>;
-    // }
-
     
-    const rootChild =
-    <>
-    {addCar('hi')}
-    </>
-    ;
-
-    ReactDOM.render(rootChild, root);
+    // <!--todo: 계속해서 추가가 되도록 해줘야 한다, 기존의 카테고리도 남아있어야 함
+    const addBtn = 
+    <button onClick={createCar}>
+      hello
+    </button>;
+    ReactDOM.render(addBtn, root);
 
     // interaction
     const carCon = root.children;
