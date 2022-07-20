@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+    console.log(root);
+
+    const button = `<button>+</button>`;
+    root.innerHTML = button;
+    
+    const btn = root.lastElementChild;
+    let clickValue = true;
+    // <!--todo: 두개 이상 생기도록 해줘야 한다, 계속해서 생기도록
+    function addCa(){
+      if(clickValue === true){
+          const createCa = document.createElement('div');
+          // var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+          root.insertBefore(createCa, btn);
+          console.log(clickValue);
+      }
+    }
+    btn.addEventListener('click', addCa);
+    
+  </script>
+</body>
+</html>

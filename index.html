@@ -16,29 +16,43 @@
   <script type="text/babel" data-type="module">
     const root = document.getElementById('root');
     console.log(root);
-
-    const Car =       
-      <div>
-        사용자 input text가 들어갈 부분
+    
+    // <!--todo: 사용자에게 input 데이터를 입력을 받을 부분
+    const Category = <div>
+        <input type="text" name="add-category" id="categoty-text"></input>
       </div>;
 
-    function createCar(){
-      let addCar = '';
-      addCar += Car;
-      return ReactDOM.render(Car, root);
-    }
+    // <!--todo: 그런데 버튼이 아닌 다른 곳에 계속 생성이 되도록 해주는 구조로 작성이 돼야한다
+      
+    // <!--todo: button 태그를 누르면 계속해서 엘리먼트가 추가된다
+      const addCa = function(){
+        return con.appendChild(<Category/>);
+      }
+        const AddBtn = 
+        <button onClick={addCa()}>
+          <div>가로 부분</div>
+          <div>세로 부분</div>
+          </button>;
+          
+    // <!--todo: 마지막에 렌더해줄 부분에 추가되도록 해주자, 그렇지만 콜백함수에 추가하는 방식으로 만들어주려면 덧붙여줄 부분이 먼저 선언이 돼야하는 것 아닐까?
+    const Container = 
+    <div id="container">
+      <AddBtn/>
+    </div>;
+    // <!--todo: 우선 만들어내는 것부터 성공하고 안에 텍스트가 입력 가능하도록 만들어주자
+    // <!--todo: 값을 가져와서 텍스트 부분에 넣어준 뒤에 생성이 되도록 해줘야 한다
+    // 컨테이너 부분
+    const con = document.getElementById('container');
+    // 입력받는 텍스트 부분
+    const caText = document.querySelector('#category-text');
+    console.log(container);
+      
+    // <!--todo: reactdom에 렌더를 해준다
+    ReactDOM.render(Container, root);
     
-    // <!--todo: 계속해서 추가가 되도록 해줘야 한다, 기존의 카테고리도 남아있어야 함
-    const addBtn = 
-    <button onClick={createCar}>
-      hello
-    </button>;
-    ReactDOM.render(addBtn, root);
-
-    // interaction
-    const carCon = root.children;
-    console.log(carCon);
-    </script>
+  
+  
+  </script>
 
 </body>
 
