@@ -1,0 +1,26 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root{
+  // width: 100vw;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 100vh;
+  display: flex;
+  &>div{
+    width: 100px;
+    height: 100vmax;
+    background-color: salmon;
+    border: 1px solid #fff;
+    // script에서 처리해줘야 할 부분
+    // position: relative;
+    // left: -10vw;
+  }
+  &>button{
+    width: 10vmax;
+    height: 10vmax;
+  }
+}
