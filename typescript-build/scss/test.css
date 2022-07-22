@@ -2,6 +2,12 @@
   border: 1px solid #ccc;
 }
 
+.ca-item {
+  width: 5rem;
+  height: inherit;
+  border: 1px solid #ccc;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,5 +17,50 @@
 
 #root {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#root > #ca-con {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#root > #ca-con > div {
+  width: 5rem;
+  height: inherit;
+  border: 1px solid #ccc;
+}
+
+#root > #ca-plus {
+  width: 10vmax;
+  height: 10vmax;
+  background-color: #ccc;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#root > #ca-plus > div {
+  width: 50%;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+}
+
+#root > #ca-plus > div:first-child {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 /*# sourceMappingURL=test.css.map */

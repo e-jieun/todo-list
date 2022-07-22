@@ -1,13 +1,65 @@
-.border-gray{
+// *variable
+$border-gray: 1px solid #ccc;
+$bg-gray: #ccc;
+$bg-bk: #000;
+
+// *func
+@mixin display-align-justify($display, $align, $justify) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// *class-set
+.border-gray {
   border: 1px solid #ccc;
 }
 
-*{
+.ca-item {
+  width: 5rem;
+  height: inherit;
+  border: $border-gray;
+}
+
+// *style
+* {
   margin: 0;
   padding: 0;
   box-sizing: border;
 }
-#root{
-  height: 100vh;
 
+#root {
+  height: 100vh;
+  display: flex;
+
+  &>#ca-con {
+    height: inherit;
+    display: flex;
+    &>div {
+      width: 5rem;
+      height: inherit;
+      border: $border-gray;
+    }
+  }
+
+  &>#ca-plus {
+    width: 10vmax;
+    height: 10vmax;
+    background-color: $bg-gray;
+    border: none;
+    @include display-align-justify(flex, center, center);
+    position: relative;
+
+    &>div {
+      width: 50%;
+      height: 1px;
+      background-color: $bg-bk;
+      position: absolute;
+    }
+
+    &>div:first-child {
+      transform: rotate((90deg));
+
+    }
+  }
 }
