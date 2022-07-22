@@ -1,0 +1,15 @@
+.border-gray {
+  border: 1px solid #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border;
+          box-sizing: border;
+}
+
+#root {
+  height: 100vh;
+}
+/*# sourceMappingURL=test.css.map */
